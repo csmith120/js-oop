@@ -15,14 +15,18 @@ console.log(place1.restaurant); // Output: italian
 console.groupEnd
 
 console.group("exercise 2")
-function Person(name, age) {
+
+function person(name, age) {
     this.name = name;
     this.age = age;
+    this.greet = function() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    };
 }
 
-const person1 = new Person("Ryan", 23);
+const person1 = new person("Ryan", 23);
 
 console.log(person1.name); // Output: Ryan
 console.log(person1.age);  // Output: 23
-
+person1.greet();           // Output: Hello, my name is Ryan and I am 23 years old.
 console.groupEnd
