@@ -12,7 +12,7 @@ console.log(place1.food);       // Output: raviola
 console.log(place1.price);      // Output: 2.34
 console.log(place1.restaurant); // Output: italian
 
-console.groupEnd
+console.groupEnd()
 
 console.group("exercise 2")
 
@@ -26,7 +26,23 @@ function person(name, age) {
 
 const person1 = new person("Ryan", 23);
 
-console.log(person1.name); // Output: Ryan
-console.log(person1.age);  // Output: 23
 person1.greet();           // Output: Hello, my name is Ryan and I am 23 years old.
-console.groupEnd
+
+console.groupEnd()
+
+console.group("exercise 3")
+
+const person2 = new person("Dom", 24)
+
+person2.greet(); // Output: Hello, my name is Dom and I am 24 years old.
+
+console.groupEnd()
+
+console.group("exercise 4")
+
+person.info = function(){
+    return "this is a person class";
+}
+
+console.log(person.info()) //this outputs the return in the info function
+console.groupEnd()
