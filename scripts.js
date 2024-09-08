@@ -45,4 +45,10 @@ person.info = function(){
 }
 
 console.log(person.info()) //this outputs the return in the info function
+/*console.log(person1.info())*/ // you get Uncaught TypeError: person1.info is not a function
+
+console.groupEnd()
+
+console.group("exercise 4")
+
 console.groupEnd()
