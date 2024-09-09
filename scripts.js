@@ -18,7 +18,18 @@ console.group("exercise 2")
 
 function person(name, age) {
     this.name = name;
-    this.age = age;
+    Object.defineProperty(this, 'age', {
+        get: function() {
+            return age;
+        },
+        set: function(value) {
+            if (value < 0) {
+                console.log('Age cannot be negative.');
+            } else {
+                age = value;
+            }
+        }
+    });
     this.greet = function() {
         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
     };
@@ -49,6 +60,8 @@ console.log(person.info()) //this outputs the return in the info function
 
 console.groupEnd()
 
-console.group("exercise 4")
+console.group("exercise 5")
+
+const person3 = new person("morlow", -1)
 
 console.groupEnd()
