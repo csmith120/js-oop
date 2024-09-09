@@ -62,6 +62,10 @@ console.groupEnd()
 
 console.group("exercise 5")
 
-const person3 = new person("morlow", -1)
+console.log("could not get this to work moving on to next exercise")
+
+const person3 = new person("morlow", -34)
+
+person3.greet()
 
 console.groupEnd()
